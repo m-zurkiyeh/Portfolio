@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-family: "Lato";
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #202020;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+/* CSS Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+ul {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+  
+a:hover {
+    color: var(--secondary-color);
+}
+
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    color:white;
+}
+  
+
+nav {
+    top: 0;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: var(--primary-color);
+}
+  
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+  
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+  
+nav ul li {
+    font-weight: var(--bold-font);
+}  
+
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+
+header .info-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8 rem;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+header .info-text h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+header .info-text h3 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+#about, #skills, #projects {
+    background-color: var(--bg-color);
+    padding: 40px;
+}
+
+#about .header, #skills .header, #projects .header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1, #skills .header h1, #projects .header h1 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#about .header a, #skills .header a {
+    color: #9e2c2c;
+    text-decoration: none;
+    font-size: 1.3em;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#about .card:hover, #skills .card:hover, #projects .card:hover {
+    border-color: white;
+    box-shadow:none;
+}
+
+#about .card, #projects .card { 
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 12px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#skills .card, #projects .card { 
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 12px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#skills .skill-cards .card i{
+  
+}
+
+#skill .skill-cards .card .info h1, #projects .card .info h1 {
+    margin-bottom: 10px;
+
+}
+
+img {
+    float:left;
+    margin:10px;
+    padding:10px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#about .card .info p, #skills .card .info p, #projects .card .info p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-weight:800;
+}
+
+
+#skills .skill-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+#skills .card i.bx {
+    margin: 5px;
+}
+
+#Name {
+    color: whitesmoke;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+    font-size: 1.3rem;
+    
+}
+
+.info {
+    color:white
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    color: white;
+}

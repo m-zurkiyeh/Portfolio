@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <link rel="stylesheet" href="assets/style.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">  
+		<title>My Portfolio</title>
+    </head>
+
+    <body>
+        
+        <header>
+            <nav>
+                <p id="Name"></p> <body onload="beginTypingAnimation('Name','Malik Zurkiyeh',1250)"></body>
+                <ul class = "navi">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                </ul>
+                <button class="burger-menu" id="burger-menu">
+                    <ion-icon class="bars" name="menu-outline"></ion-icon>
+                </button>
+                
+            </nav>
+            <div class="info-text">
+                <h1>Malik's Portfolio</h1>
+            </div>
+        </header>
+            
+        
+        <div id="particles-js"></div>
+        
+
+        <section id="about">
+            
+            <div class="header">
+                <h1>About Me</h1>
+            </div>
+
+            <div class="container">
+                <div class="card">
+                    <div class="info">
+                        <p>
+                            My name is Malik Zurkiyeh, I am 21 year old Arab of Palestinian/Jordanian Descent.
+                            I am a new graduate that has completed a 3-year program on Computer Engineering Technology - Computing Science and obtained an Ontario College Advanced Diploma
+                            for doing so at Algonquin College. My passions are Video Games, my Culture and Programming. During my time at Algonquin, I have studied programming languages such as
+                            Java, C, C++, C#, SQL, Assembly and studied various aspects of programming such as 
+                            Computational Mathematics, Object-Oriented Programming, Data Structures, Real-Time Programming and Interfacing (Working with Arduino) 
+                        </p>
+                        
+                    </div>
+                </div>
+                <img src="imgs/picture.jpg" alt="Malik Zurkiyeh" width="400" height="400">
+            </div>    
+        </section>
+        
+        
+        <section id="projects">
+            <div class="header">
+                <h1>Projects</h1>
+            </div>
+
+            <div class="container">
+                <div class="card">
+                    <div class="info">
+                        <h1>Java Paint</h1>
+                        <p>
+                            I created a painting application akin to a very lite version of Microsoft Paint that
+                            allow the user to draw with a pencil, change its color, adjust its size, draw with a line and alter its stroke, identify a color using a color
+                            picker tool, fill the background using a paint bucket tool with more features coming soon such as image importing, saving and loading previous drawings and many more 
+                        </p>
+                    </div>
+                </div>
+                <img src="imgs/java_paint.png" alt="Java Paint" width="600" height="300"></div>
+            </div>
+            
+            <div class="container">
+                <img src="imgs/pyduino_pong.png" alt="PyDuino Pong" width="500" height="300">
+                <div class="card">
+                    <div class="info">
+                        <h1>PyDuino Pong</h1>
+                        <p>A clone of the Atari classic Pong, written in Pygame library in Python version 3.7.0 that uses the serial library to communicated with an arduino board that has 2 potentiometers and 2 LEDs</p> 
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section id="skills">
+            <div class="header" style="justify-content: center;">
+                <h1>Skills</h1>
+            </div>
+
+            <div class="skill-cards">
+                <div class="card">
+                    <i class='devicon-github-original' style="font-size: 1.5cm; color: #ffffff;"></i>
+                </div>
+
+                <div class="card">
+                    <i class='devicon-cplusplus-plain' style="font-size: 1.5cm; color: #ffffff; "></i>
+                </div>
+
+                <div class="card">
+                    <i class='bx bxl-python' style="font-size: 1.5cm; color: #ffffff;"></i>
+                </div>
+
+                <div class="card">
+                    <i class='bx bxl-java' style="font-size: 1.5cm; color: #ffffff;"></i>
+                </div>
+
+				<div class="card">
+				    <i class='devicon-ubuntu-plain' style="font-size: 1.5cm; color:#ffffff"></i>
+				</div>
+
+            </div>
+
+
+			<div class="skill-cards">
+				<div class="card">
+					 <i class='bx bxl-flutter' style="font-size: 1.5cm; color: #ffffff;"></i>
+				</div>
+
+				<div class="card">
+					 <i class='bx bxl-visual-studio' style="font-size: 1.5cm; color: #ffffff;"></i>
+				</div>
+
+				<div class="card">
+					 <i class='devicon-arduino-plain-wordmark' style="font-size: 1.5cm; color: #ffffff;"></i>
+				</div>
+
+				<div class="card">
+					 <i class='devicon-c-plain' style="font-size: 1.5cm; color: #ffffff;"></i>
+				</div>
+
+                <div class="card">
+                     <i class='devicon-csharp-plain' style="font-size: 1.5cm; color: #ffffff;"></i>
+                </div>
+			</div>
+
+            
+        </section>
+
+
+        <footer>
+            yo dis a footer?
+            <button class="scroll-top" onclick="window.scrollTo(0, 0)">
+                <i class='bx bxs-up-arrow'></i>
+            </button>
+        </footer>
+        
+        
+
+
+        <script src="assets/particles.js-master/particles.js"></script>
+        <script src="assets/particles.js-master/demo/js/app.js"></script>
+        <script src = "assets/script.js"></script>
+    </body>
+</html>
