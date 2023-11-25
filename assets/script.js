@@ -1,5 +1,15 @@
-
 let i = 0;
+
+
+$(document).ready(function () {
+
+    $('a[href="#java_paint"]').click(function () {
+        $("#java_paint").fadeIn("slow");
+    });
+    $('a[href="#pyduino_pong"]').click(function () {
+        $("#pyduino_pong").fadeIn("slow");
+    });
+});
 
 /**
  * A function that calls the typingAnimation() method to after a certain period of time to induce a delay 
@@ -8,8 +18,10 @@ let i = 0;
  * @param {[int]} speed [The speed in which the animation will be run at]
  * @returns {} [void]
  */
-function beginTypingAnimation(id,text,speed = 50) {
-    setTimeout(function(){typingAnimation(id,text);}, speed);
+function beginTypingAnimation(id, text, speed = 50) {
+    setTimeout(function () {
+        typingAnimation(id, text);
+    }, speed);
 }
 
 
@@ -20,7 +32,7 @@ function beginTypingAnimation(id,text,speed = 50) {
  * @param {[int]} speed [The speed in which the animation will be run at]
  * @returns {} [void]
  */
-function typingAnimation(id,text,speed = 50) {
+function typingAnimation(id, text, speed = 50) {
     var nameElement = document.getElementById(id);
     if (i < text.length) {
         if (text[i] === ' ') {
@@ -30,7 +42,9 @@ function typingAnimation(id,text,speed = 50) {
         }
 
         i++;
-        setTimeout(function (){typingAnimation(id,text);}, speed);
+        setTimeout(function () {
+            typingAnimation(id, text);
+        }, speed);
 
     }
 }

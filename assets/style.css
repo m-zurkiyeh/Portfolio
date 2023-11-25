@@ -29,6 +29,11 @@ html {
     display:flex;
     justify-content: center;
     align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .container {
@@ -51,6 +56,8 @@ ul {
 a {
     text-decoration: none;
     color: var(--primary-color);
+    display: block;
+    text-align: center;
 }
   
 a:hover {
@@ -143,7 +150,9 @@ header .info-text h3 {
     margin: 0;
 }
 
-
+#projects .container .card .info h1 {
+    text-align: center;
+}
 
 #about, #skills, #projects {
     background-color: var(--bg-color);
@@ -162,16 +171,6 @@ header .info-text h3 {
     text-transform: uppercase;
 }
 
-#about .header a, #skills .header a {
-    color: #9e2c2c;
-    text-decoration: none;
-    font-size: 1.3em;
-    border: 1px solid transparent;
-    padding: 10px 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
 
 #about .card:hover, #skills .card:hover, #projects .card:hover {
     border-color: white;
@@ -203,15 +202,16 @@ header .info-text h3 {
   
 }
 
-#skill .skill-cards .card .info h1, #projects .card .info h1 {
+#skill .skill-cards .card .info h1, #projects .project-cards .card .info h1 {
     margin-bottom: 10px;
-
+    text-align: center;
 }
 
 img {
     float:left;
     margin:10px;
     padding:10px;
+    display: block;
 }
 
 .sticky {
@@ -234,6 +234,14 @@ img {
     gap: 2rem;
 }
 
+#projects .project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
 
 #skills .card i.bx {
     margin: 5px;
@@ -249,6 +257,23 @@ img {
 
 .info {
     color:white
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer {
