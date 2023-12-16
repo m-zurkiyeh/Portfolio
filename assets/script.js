@@ -2,27 +2,33 @@ let i = 0;
 
 
 $(document).ready(function () {
-
-    $('a[href="#java_paint"]').click(function (e) {
-        $(this).modal({
-            fadeDuration: 250
-        });
-        return false;
+    
+    $(document).on('click', '#java_paint_modal', function (event) {
+        event.preventDefault();
+        console.log("greetings")
+        $("#java_paint").modal();
     });
 
-    $('a[href="#pyduino_pong"]').click(function () {
-        $(this).modal({
-            fadeDuration: 250
-        });
-        return false;
+    $(document).on('click', '#pyduino_pong_modal', function (event) {
+        event.preventDefault();
+        console.log("greetings")
+        $("#pyduino_pong").modal();
     });
 
-    $('a[href="#login"]').click(function () {
-        $(this).modal({
-            fadeDuration: 250
-        });
-        return false;
+    $(document).on('click', '#login_modal', function (event) {
+        event.preventDefault();
+        console.log("greetings")
+        $("#login").modal();
     });
+
+    // $('a[href="#pyduino_pong"]').click(function () {
+    //     $("#pyduino_pong").fadeIn("slow");
+    // });
+
+    // $('a[href="#login"]').click(function () {
+    //     $("#login").fadeIn("slow");
+
+    // });
 
 });
 
