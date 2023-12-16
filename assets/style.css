@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 :root {
@@ -20,6 +21,8 @@ html {
     --bottom-margin-2: 1rem;
     --line-height: 1.7rem;
     --transition: 0.3s;
+    overflow-x: hidden;
+    
 }
 
 
@@ -47,6 +50,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
   
 ul {
@@ -70,6 +74,7 @@ body {
     background-color: var(--bg-color);
     width: 100vw;
     height: 100vh;
+    
 }
 
 h1{
@@ -198,9 +203,6 @@ header .info-text h3 {
     transition: all 0.3s ease;
 }
 
-#skills .skill-cards .card i{
-  
-}
 
 #skill .skill-cards .card .info h1, #projects .project-cards .card .info h1 {
     margin-bottom: 10px;
@@ -239,6 +241,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    
 }
 
 
@@ -259,6 +262,15 @@ img {
     color:white
 }
 
+.modal {
+    position:fixed;
+    display:block;
+}
+
+.modal h2 {
+    padding-bottom:10px;
+    color: black;
+}
 
 
 /* The Close Button */

@@ -3,12 +3,27 @@ let i = 0;
 
 $(document).ready(function () {
 
-    $('a[href="#java_paint"]').click(function () {
-        $("#java_paint").fadeIn("slow");
+    $('a[href="#java_paint"]').click(function (e) {
+        $(this).modal({
+            fadeDuration: 250
+        });
+        return false;
     });
+
     $('a[href="#pyduino_pong"]').click(function () {
-        $("#pyduino_pong").fadeIn("slow");
+        $(this).modal({
+            fadeDuration: 250
+        });
+        return false;
     });
+
+    $('a[href="#login"]').click(function () {
+        $(this).modal({
+            fadeDuration: 250
+        });
+        return false;
+    });
+
 });
 
 /**
