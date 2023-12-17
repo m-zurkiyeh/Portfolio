@@ -228,7 +228,6 @@ img {
 }
 
 
-
 button {
     font-family: "Lato";
     display: inline-block;
@@ -236,7 +235,8 @@ button {
     margin: 0 auto;
     display: block;
     padding: 4.5px;
-    border-radius: 10px;
+    border-radius: 6px;
+    font-weight: 800;
 }
 
 .sticky {
@@ -270,7 +270,6 @@ button {
 }
 
 
-
 #skills .card i.bx {
     margin: 5px;
 }
@@ -287,80 +286,9 @@ button {
     color: white
 }
 
-/* .modal {
-    display: none;
-    position: fixed;
-    padding-top: 50px;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: translate(-50%, -50%);
-    
-}
-
-.modal-content {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    margin: auto;
-    width: 75%;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    overflow-y: hidden;
-}
-
-.close-btn {
-    float: right;
-    color: lightgray;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.close-btn:hover {
-    color: darkgray;
-} */
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-.modal h2 {
-    padding-bottom: 10px;
-    color: black;
-}
-
 dialog {
     padding: 30px;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    overflow-y: hidden;
+    animation: fadeIn 0.6s ease normal;
     border-radius: 3px;
     left: 50%;
     top: 50%;
@@ -371,23 +299,20 @@ dialog h2 {
     padding-bottom: 10px;
 }
 
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 footer {
     text-align: center;
     padding: 3px;
     color: white;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

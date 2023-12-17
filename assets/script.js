@@ -5,24 +5,58 @@ let i = 0;
 // let modal = document.querySelector(".modal")
 // let closeBtn = document.querySelector(".close-btn")
 
-let modal = document.querySelector('dialog');
-let openButton = document.querySelector('.open-button');
-let closeButton = document.querySelector('.close-button');
+let javaModal = document.getElementById('modal1');
+let pyduinoModal = document.getElementById('modal2');
+let loginModal = document.getElementById('modal3');
+let openButton1 = document.querySelector('.open-button1');
+let openButton2 = document.querySelector('.open-button2');
+let openButton3 = document.querySelector('.open-button3');
 
-openButton.addEventListener('click', () => {
-    console.log("Hello World");
-    modal.showModal();
+openButton1.addEventListener('click', () => {
+    javaModal.showModal();
+    
+});
+openButton2.addEventListener('click', () => {
+    pyduinoModal.showModal();
+});
+openButton3.addEventListener('click', () => {
+    loginModal.showModal();
 });
 
-modal.addEventListener("click", e => {
-    const dialogDimensions = modal.getBoundingClientRect()
+
+javaModal.addEventListener("click", e => {
+    const dialogDimensions = javaModal.getBoundingClientRect()
     if (
         e.clientX < dialogDimensions.left ||
         e.clientX > dialogDimensions.right ||
         e.clientY < dialogDimensions.top ||
         e.clientY > dialogDimensions.bottom
     ) {
-        modal.close()
+        javaModal.close()
+    }
+});
+
+pyduinoModal.addEventListener("click", e => {
+    const dialogDimensions = pyduinoModal.getBoundingClientRect()
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        pyduinoModal.close()
+    }
+});
+
+loginModal.addEventListener("click", e => {
+    const dialogDimensions = loginModal.getBoundingClientRect()
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        loginModal.close()
     }
 });
 
