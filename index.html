@@ -6,9 +6,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="assets/jquery/jquery-modal-master/jquery.modal.min.css" ></link>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <!--
+        <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="assets/jquery/jquery-modal-master/jquery.modal.min.css" ></link>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    -->
     <title>My Portfolio</title>
 </head>
 
@@ -75,8 +77,9 @@
                 <div class="info">
                     <h1>Java Paint</h1>
                     <img src="imgs/java_paint.png" alt="Java Paint">
-                    <a href="#java_paint">More Information</a>
-                    <button id = "java_paint_modal" type="button">More Information</button>
+                    <div>
+                        <button class="open-button">More Information</button>
+                    </div>
                 </div>
             </div>
 
@@ -85,7 +88,6 @@
                     <h1>PyDuino Pong</h1>
                     <img src="imgs/pyduino_pong.png" alt="PyDuino Pong" width="500" height="300">
                     <a href="#pyduino_pong" rel="">More Information</a>
-                    <button id = "pyduino_pong_modal" type="button">More Information</button>
                 </div>
             </div>
 
@@ -94,7 +96,6 @@
                     <h1>Login RESTful API</h1>
                     <img src="imgs/signup.png" alt="Login">
                     <a href="#login" rel="">More Information</a>
-                    <button id = "login_modal" type="button">More Information</button>
                 </div>
             </div>
 
@@ -132,7 +133,6 @@
 
         </div>
 
-
         <div class="skill-cards">
             <div class="card">
                 <i class='bx bxl-flutter' style="font-size: 1.5cm; color: #ffffff;"></i>
@@ -154,36 +154,79 @@
                 <i class='devicon-csharp-plain' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
         </div>
-        
+
     </section>
 
-    <form id="java_paint" class="modal">
-        <h2>About</h2>
-        <p>
-            A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with a size adjustable pencil as well as changing the its color,
-            picking a color from the screen and storing it for later use via the rectangle icon in the menu, erase contents as well as drawing a stroke adjustable line and with more features to come in the forseeable future
-        </p> 
-    </form>
+    <!--
 
-    <div id="pyduino_pong" class="modal">
-        <h2>About</h2>
-        <p>
-            A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow for the use
-            of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in terms of score
-        </p>
+        <div id="java_paint" class="modal">
+            <div class="modal-content">
+                <dialog>
+                    <h2>About</h2>
+                    <p>
+                        
+                        A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with
+                        a
+                        size adjustable pencil as well as changing the its color,
+                        picking a color from the screen and storing it for later use via the rectangle icon in the menu, erase
+                        contents as well as drawing a stroke adjustable line and with more features to come in the forseeable
+                        future
+                    </p>
+                </dialog>
+            </div>
+        </div>
+    -->
+
+    <div>
+        <dialog>
+            <h2>About</h2>
+            <p>
+
+                A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with
+                a
+                size adjustable pencil as well as changing the its color,
+                picking a color from the screen and storing it for later use via the rectangle icon in the menu, erase
+                contents as well as drawing a stroke adjustable line and with more features to come in the forseeable
+                future
+            </p>
+        </dialog>
     </div>
 
-    <div id="login" class="modal">
-        <h2>About</h2>
-        <p>
-            A RESTful API written in Python using the Flask framework with MariaDB functionality that emulates a signup page
-        </p>
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-btn">&times;</span>
+            <h1>I am the Header</h1>
+        </div>
+        <div class="modal-content">
+            <p>this is the text inside the modal</p>
+        </div>
+        <div class="modal-footer">
+            <h2>I am the Footer</h2>
+        </div>
     </div>
+
+    <!--
+
+        <div id="pyduino_pong" class="modal">
+            <h2>About</h2>
+            <p>
+                A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow for the use
+                of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in terms of score
+            </p>
+        </div>
+        
+        <div id="login" class="modal">
+            <h2>About</h2>
+            <p>
+                A RESTful API written in Python using the Flask framework with MariaDB functionality that emulates a signup page
+            </p>
+        </div>
+    -->
 
     <script src="assets/particles.js-master/particles.js"></script>
     <script src="assets/particles.js-master/demo/js/app.js"></script>
     <script src="assets/script.js"></script>
-    
+
 </body>
 
 </html>

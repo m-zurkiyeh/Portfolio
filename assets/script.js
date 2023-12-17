@@ -1,35 +1,29 @@
 let i = 0;
 
+// let dialog = document.querySelector("dialog");
+// let modalBtn = document.getElementById("button1")
+// let modal = document.querySelector(".modal")
+// let closeBtn = document.querySelector(".close-btn")
 
-$(document).ready(function () {
-    
-    $(document).on('click', '#java_paint_modal', function (event) {
-        event.preventDefault();
-        console.log("greetings")
-        $("#java_paint").modal();
-    });
+let modal = document.querySelector('dialog');
+let openButton = document.querySelector('.open-button');
+let closeButton = document.querySelector('.close-button');
 
-    $(document).on('click', '#pyduino_pong_modal', function (event) {
-        event.preventDefault();
-        console.log("greetings")
-        $("#pyduino_pong").modal();
-    });
+openButton.addEventListener('click', () => {
+    console.log("Hello World");
+    modal.showModal();
+});
 
-    $(document).on('click', '#login_modal', function (event) {
-        event.preventDefault();
-        console.log("greetings")
-        $("#login").modal();
-    });
-
-    // $('a[href="#pyduino_pong"]').click(function () {
-    //     $("#pyduino_pong").fadeIn("slow");
-    // });
-
-    // $('a[href="#login"]').click(function () {
-    //     $("#login").fadeIn("slow");
-
-    // });
-
+modal.addEventListener("click", e => {
+    const dialogDimensions = modal.getBoundingClientRect()
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        modal.close()
+    }
 });
 
 /**

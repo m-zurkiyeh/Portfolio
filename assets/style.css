@@ -4,7 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-    
+
 }
 
 :root {
@@ -22,14 +22,14 @@ html {
     --line-height: 1.7rem;
     --transition: 0.3s;
     overflow-x: hidden;
-    
+
 }
 
 
 #particles-js {
     width: 100%;
     height: 100vh;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -46,24 +46,24 @@ html {
 }
 
 /* CSS Resets */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
-  
+
 ul {
     list-style-type: none;
 }
-  
+
 a {
     text-decoration: none;
     color: var(--primary-color);
     display: block;
     text-align: center;
 }
-  
+
 a:hover {
     color: var(--secondary-color);
 }
@@ -74,13 +74,13 @@ body {
     background-color: var(--bg-color);
     width: 100vw;
     height: 100vh;
-    
+
 }
 
-h1{
-    color:white;
+h1 {
+    color: white;
 }
-  
+
 
 nav {
     top: 0;
@@ -98,7 +98,7 @@ nav {
 nav h1 {
     color: var(--primary-color);
 }
-  
+
 nav a {
     color: var(--primary-color);
     transition: var(--transition);
@@ -108,15 +108,15 @@ nav a:hover {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
 }
-  
+
 nav ul {
     display: flex;
     gap: 1.9rem;
 }
-  
+
 nav ul li {
     font-weight: var(--bold-font);
-}  
+}
 
 
 .burger-menu {
@@ -138,7 +138,7 @@ header .info-text {
     gap: 0.8 rem;
     height: 100vh;
     width: 100%;
-    
+
 }
 
 header .info-text h1 {
@@ -159,32 +159,41 @@ header .info-text h3 {
     text-align: center;
 }
 
-#about, #skills, #projects {
+#about,
+#skills,
+#projects {
     background-color: var(--bg-color);
     padding: 40px;
 }
 
-#about .header, #skills .header, #projects .header{
-    display:flex;
+#about .header,
+#skills .header,
+#projects .header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
 
-#about .header h1, #skills .header h1, #projects .header h1 {
+#about .header h1,
+#skills .header h1,
+#projects .header h1 {
     color: #fff;
     text-transform: uppercase;
 }
 
 
-#about .card:hover, #skills .card:hover, #projects .card:hover {
+#about .card:hover,
+#skills .card:hover,
+#projects .card:hover {
     border-color: white;
-    box-shadow:none;
+    box-shadow: none;
 }
 
-#about .card, #projects .card { 
+#about .card,
+#projects .card {
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
     display: flex;
     gap: 30px;
@@ -192,10 +201,11 @@ header .info-text h3 {
     transition: all 0.3s ease;
 }
 
-#skills .card, #projects .card { 
+#skills .card,
+#projects .card {
     padding: 30px;
     margin: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
     display: flex;
     gap: 30px;
@@ -204,16 +214,29 @@ header .info-text h3 {
 }
 
 
-#skill .skill-cards .card .info h1, #projects .project-cards .card .info h1 {
+#skill .skill-cards .card .info h1,
+#projects .project-cards .card .info h1 {
     margin-bottom: 10px;
     text-align: center;
 }
 
 img {
-    float:left;
-    margin:10px;
-    padding:10px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
     display: block;
+}
+
+
+
+button {
+    font-family: "Lato";
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 4.5px;
+    border-radius: 10px;
 }
 
 .sticky {
@@ -222,26 +245,28 @@ img {
     width: 100%
 }
 
-#about .card .info p, #skills .card .info p, #projects .card .info p {
+#about .card .info p,
+#skills .card .info p,
+#projects .card .info p {
     font-size: 1.1rem;
     line-height: 1.8rem;
-    font-weight:800;
+    font-weight: 800;
 }
 
 
-#skills .skill-cards{
+#skills .skill-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
 
-#projects .project-cards{
+#projects .project-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    
+
 }
 
 
@@ -255,33 +280,110 @@ img {
     font-family: 'Press Start 2P';
     font-weight: 400;
     font-size: 1.3rem;
-    
+
 }
 
 .info {
-    color:white
+    color: white
 }
 
+/* .modal {
+    display: none;
+    position: fixed;
+    padding-top: 50px;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    overflow-y: hidden;
+}
+
+.close-btn {
+    float: right;
+    color: lightgray;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: darkgray;
+} */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
 
 .modal h2 {
-    padding-bottom:10px;
+    padding-bottom: 10px;
     color: black;
 }
 
+dialog {
+    padding: 30px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    overflow-y: hidden;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog h2 {
+    padding-bottom: 10px;
+}
 
 /* The Close Button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 footer {
