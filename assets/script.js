@@ -5,60 +5,26 @@ let i = 0;
 // let modal = document.querySelector(".modal")
 // let closeBtn = document.querySelector(".close-btn")
 
-let javaModal = document.getElementById('modal1');
-let pyduinoModal = document.getElementById('modal2');
-let loginModal = document.getElementById('modal3');
-let openButton1 = document.querySelector('.open-button1');
-let openButton2 = document.querySelector('.open-button2');
-let openButton3 = document.querySelector('.open-button3');
 
-openButton1.addEventListener('click', () => {
-    javaModal.showModal();
-    
-});
-openButton2.addEventListener('click', () => {
-    pyduinoModal.showModal();
-});
-openButton3.addEventListener('click', () => {
-    loginModal.showModal();
-});
+let buttonArr = document.querySelectorAll('.open-button');
+let modals = document.querySelectorAll('dialog');
 
+// The following for loop initializes the button clicks to display their respective modals as well as handle modals closing 
+for (let i = 0; i < buttonArr.length; i++) {
+    buttonArr[i].addEventListener("click", function () {
+        modals[i].showModal();
+    });
 
-javaModal.addEventListener("click", e => {
-    const dialogDimensions = javaModal.getBoundingClientRect()
-    if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-    ) {
-        javaModal.close()
-    }
-});
-
-pyduinoModal.addEventListener("click", e => {
-    const dialogDimensions = pyduinoModal.getBoundingClientRect()
-    if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-    ) {
-        pyduinoModal.close()
-    }
-});
-
-loginModal.addEventListener("click", e => {
-    const dialogDimensions = loginModal.getBoundingClientRect()
-    if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-    ) {
-        loginModal.close()
-    }
-});
+    modals[i].addEventListener("click", e => {
+        const dialogDimensions = modals[i].getBoundingClientRect()
+        if (e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom) {
+            modals[i].close();
+        }
+    });
+}
 
 /**
  * A function that calls the typingAnimation() method to after a certain period of time to induce a delay 
