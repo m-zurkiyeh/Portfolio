@@ -9,25 +9,22 @@ let i = 0;
 let buttonArr = document.querySelectorAll('.open-button');
 let modals = document.querySelectorAll('dialog');
 
-document.addEventListener('DOMContentLoaded', function () {
-    
-    // The following for loop initializes the button clicks to display their respective modals as well as handle modals closing 
-    for (let i = 0; i < buttonArr.length; i++) {
-        buttonArr[i].addEventListener("click", function () {
-            modals[i].showModal();
-        });
+// The following for loop initializes the button clicks to display their respective modals as well as handle modals closing 
+for (let i = 0; i < buttonArr.length; i++) {
+    buttonArr[i].addEventListener("click", function () {
+        modals[i].showModal();
+    });
 
-        modals[i].addEventListener("click", e => {
-            const dialogDimensions = modals[i].getBoundingClientRect()
-            if (e.clientX < dialogDimensions.left ||
-                e.clientX > dialogDimensions.right ||
-                e.clientY < dialogDimensions.top ||
-                e.clientY > dialogDimensions.bottom) {
-                modals[i].close();
-            }
-        });
-    }
-});
+    modals[i].addEventListener("click", e => {
+        const dialogDimensions = modals[i].getBoundingClientRect()
+        if (e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom) {
+            modals[i].close();
+        }
+    });
+}
 
 /**
  * A function that calls the typingAnimation() method to after a certain period of time to induce a delay 
