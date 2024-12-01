@@ -13,6 +13,7 @@ let modals = document.querySelectorAll('dialog');
 for (let i = 0; i < buttonArr.length; i++) {
     buttonArr[i].addEventListener("click", function () {
         modals[i].showModal();
+        modals[i].classList.add("popup")
     });
 
     modals[i].addEventListener("click", e => {
@@ -63,3 +64,20 @@ function typingAnimation(id, text, speed = 50) {
 
     }
 }
+
+
+$('.project-card').click(function(){
+    var modalId = $(this).data('modal-id');
+    console.log(modalId);
+    $(`#modal-container[data-modal-id='${modalId}']`).removeAttr('class').addClass('unfold');
+    $('body').addClass('modal-active');
+    $('body').css('overflow','hidden');
+
+})
+
+  
+$(`#modal-container[data-modal-id]`).click(function(){
+    $(this).addClass('out');
+    $('body').removeClass('modal-active');
+    $('body').css('overflow','auto');
+});

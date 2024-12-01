@@ -4,7 +4,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 :root {
@@ -26,24 +25,7 @@ html {
 }
 
 
-#particles-js {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-}
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
 
 /* CSS Resets */
 * {
@@ -64,18 +46,24 @@ a {
     text-align: center;
 }
 
-a:hover {
-    color: var(--secondary-color);
-}
 
 
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    
 
 }
+
+footer {
+    text-align: center;
+    padding: 3px;
+    color: white;
+}
+
 
 h1 {
     color: white;
@@ -96,17 +84,16 @@ nav {
 }
 
 nav h1 {
-    color: var(--primary-color);
+    color: white;
 }
 
 nav a {
-    color: var(--primary-color);
+    color: white;
     transition: var(--transition);
 }
 
 nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    color: var(--primary-shadow);
 }
 
 nav ul {
@@ -118,6 +105,50 @@ nav ul li {
     font-weight: var(--bold-font);
 }
 
+img {
+    float: left;
+    margin: 7px;
+    padding: 7px;
+    width: 350;
+    height:auto;
+    display: block;
+}
+
+
+button {
+    font-family: "Lato";
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 4.5px;
+    border-radius: 6px;
+    font-weight: 800;
+}
+
+
+dialog {
+    padding: 30px;
+    animation: fadeIn 0.6s ease normal;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    margin:0 auto;
+    transform: translate(-50%, -50%);
+}
+
+dialog h2 {
+    padding-bottom: 10px;
+}
+
+dialog::backdrop {
+    background: rgba(50,50,50,0.75);
+}
+
+
+
+
+
 
 .burger-menu {
     color: var(--primary-color);
@@ -128,6 +159,32 @@ nav ul li {
     display: none;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.info {
+    color: white
+}
+
+section#skills
+div.skill-cards
+div.card
+ul#skill-info{
+    color: white;
+    padding: 150;
+    list-style-type:disc;
+    text-indent: 8px;
+    line-height: 25px;
+}
 
 header .info-text {
     position: absolute;
@@ -155,7 +212,19 @@ header .info-text h3 {
     margin: 0;
 }
 
-#projects .container .card .info h1 {
+section#about
+div.container
+div.card
+div.info
+p.bio {
+    line-height:2.0
+}
+
+#projects 
+.container 
+.project-card 
+.info
+h1 {
     text-align: center;
 }
 
@@ -166,13 +235,15 @@ header .info-text h3 {
     padding: 40px;
 }
 
-#about .header,
 #skills .header,
 #projects .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 #about .header h1,
@@ -183,16 +254,31 @@ header .info-text h3 {
 }
 
 
+#projects .project-card:hover {
+    border-color: white;
+    box-shadow: none;
+    cursor: pointer;
+}
+
 #about .card:hover,
-#skills .card:hover,
-#projects .card:hover {
+#skills .skill-card:hover {
     border-color: white;
     box-shadow: none;
 }
 
-#about .card,
-#projects .card {
-    padding: 30px;
+#about .card{
+  padding: 20px;
+  margin: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  display: flex;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#skills .skill-card {
+  padding: 20px;
+    margin: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
     display: flex;
@@ -201,10 +287,9 @@ header .info-text h3 {
     transition: all 0.3s ease;
 }
 
-#skills .card,
-#projects .card {
-    padding: 30px;
-    margin: 10px;
+#projects .project-card {
+    padding: 20px;
+    margin: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 12px;
     display: flex;
@@ -214,40 +299,21 @@ header .info-text h3 {
 }
 
 
-#skill .skill-cards .card .info h1,
-#projects .project-cards .card .info h1 {
-    margin-bottom: 10px;
+#skill .skill-cards .skill-card .info h1,
+#projects .project-cards .project-card .info h1 {
+    margin-bottom: 0px;
     text-align: center;
 }
 
-img {
-    float: left;
-    margin: 10px;
-    padding: 10px;
-    display: block;
+
+#projects div.project-card div.info {
+    margin-top: -10px;
 }
 
-
-button {
-    font-family: "Lato";
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    padding: 4.5px;
-    border-radius: 6px;
-    font-weight: 800;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
 
 #about .card .info p,
-#skills .card .info p,
-#projects .card .info p {
+#skills .skill-card .info p,
+#projects .project-card .info p {
     font-size: 1.1rem;
     line-height: 1.8rem;
     font-weight: 800;
@@ -259,6 +325,8 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    margin:10;
+    padding:10;
 }
 
 #projects .project-cards {
@@ -269,58 +337,162 @@ button {
 
 }
 
-
-#skills .card i.bx {
-    margin: 5px;
-}
-
 #Name {
     color: whitesmoke;
     font-family: 'Press Start 2P';
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 
 }
 
-.info {
-    color: white
-}
-
-dialog {
-    padding: 30px;
-    animation: fadeIn 0.6s ease normal;
-    border-radius: 3px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-dialog h2 {
-    padding-bottom: 10px;
-}
-
-dialog::backdrop {
-    background: rgba(50,50,50,0.75);
-}
-
-footer {
-    text-align: center;
-    padding: 3px;
-    color: white;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/*Modal format and animation, courtesy of Jesse Couch
+CodePen Profile: https://codepen.io/designcouch
+Animations: https://codepen.io/designcouch/pen/obvKxm
+*/
+#modal-container {
+    position:fixed;
+    display:table;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    transform:scale(0);
+    z-index:1;
+    &.unfold {
+      transform:scaleY(.01) scaleX(0);
+      animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+      .modal-background {
+        .modal {
+          transform:scale(0);
+          animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+      &.out {
+        transform:scale(1);
+        animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        .modal-background {
+          .modal {
+            animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+          }
+        }
+      }
+    }  
+    
+    .modal-background {
+      display:table-cell;
+      background:rgba(0,0,0,.8);
+      text-align:center;
+      vertical-align:middle;
+      .modal {
+        background:white;
+        padding:50px;
+        display:inline-block;
+        border-radius:3px;
+        font-weight:300;
+        position:relative;
+        h2 {
+          font-size:25px;
+          line-height:25px;
+          margin-bottom:15px;
+        }
+        p {
+          font-size:18px;
+          line-height:22px;
+        }
+        .modal-svg {
+          position:absolute;
+          top:0;
+          left:0;
+          height:100%;
+          width:100%;
+          border-radius:3px;
+          rect {
+            stroke: #fff;
+            stroke-width: 2px;
+            stroke-dasharray: 778;
+            stroke-dashoffset: 778;
+          }
+        }
+      }
     }
 
-    to {
-        opacity: 1;
-    }
 }
 
-@keyframes fadeOut {
-    from {opacity:1;}
-    to {opacity:0;}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right:0;
 }
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 30px;
+}
+
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.github {
+  background: #553f3c;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+@keyframes unfoldIn {
+    0% {
+      transform:scaleY(.005) scaleX(0);
+    }
+    50% {
+      transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+      transform:scaleY(1) scaleX(1);
+    }
+  }
+  
+  @keyframes unfoldOut {
+    0% {
+      transform:scaleY(1) scaleX(1);
+    }
+    50% {
+      transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+      transform:scaleY(.005) scaleX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform:scale(0);
+    }
+    100% {
+      transform:scale(1);
+    }
+  }
+  
+  @keyframes zoomOut {
+    0% {
+      transform:scale(1);
+    }
+    100% {
+      transform:scale(0);
+    }
+  }
+
+
+/*_____________________________________________*/

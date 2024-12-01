@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="assets/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!--
         <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
         <link rel="stylesheet" href="assets/jquery/jquery-modal-master/jquery.modal.min.css" ></link>
@@ -18,7 +20,7 @@
     <header>
         <nav>
             <p id="Name"></p>
-
+            
             <body onload="beginTypingAnimation('Name','Malik Zurkiyeh',1250)"></body>
             <ul class="navi">
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -28,15 +30,16 @@
             <button class="burger-menu" id="burger-menu">
                 <ion-icon class="bars" name="menu-outline"></ion-icon>
             </button>
-
+            
         </nav>
         <div class="info-text">
-            <h1>Malik's Portfolio</h1>
+            <h1><center>Welcome to My Portfolio</center></h1>
         </div>
     </header>
-
-
+    
     <div id="particles-js"></div>
+
+    
 
 
     <section id="about">
@@ -48,11 +51,9 @@
         <div class="container">
             <div class="card">
                 <div class="info">
-                    <p>
-                        My name is Malik Zurkiyeh, I am 21 year old Arab of Palestinian/Jordanian Descent.
-                        I am a new graduate that has completed a 3-year program on Computer Engineering Technology -
-                        Computing Science and obtained an Ontario College Advanced Diploma
-                        for doing so at Algonquin College. My passions are video games, learning my own culture and programming.
+                    <p class ="bio">
+                        My name is Malik Zurkiyeh.
+                        I am a new graduate of Algonquin College where I completed a 3-year program on Computer Engineering and obtained an College Diploma. <br>
                         During my time at Algonquin, I have studied programming languages such as
                         Java, C, C++, C#, SQL, Assembly and studied various aspects of programming such as
                         Computational Mathematics, Object-Oriented Programming, Data Structures, Real-Time Programming
@@ -61,7 +62,7 @@
 
                 </div>
             </div>
-            <img src="imgs/picture.jpg" alt="Malik Zurkiyeh" width="400" height="400">
+            <img src="imgs/picture.jpg" alt="Malik Zurkiyeh" width="350" height="350">
         </div>
     </section>
 
@@ -73,33 +74,24 @@
 
         <div class="project-cards">
 
-            <div class="card">
-                <div class="info">
+            <div class="project-card" data-modal-id="1" >
+                <div class="info" id="one">
                     <h1>Java Paint</h1>
                     <img src="imgs/java_paint.png" alt="Java Paint">
-                    <div>
-                        <button class="open-button">More Information</button>
-                    </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="info">
+            <div class="project-card" data-modal-id="2">
+                <div class="info" id="one">
                     <h1>PyDuino Pong</h1>
-                    <img src="imgs/pyduino_pong.png" alt="PyDuino Pong" width="500" height="300">
-                    <div>
-                        <button class="open-button">More Information</button>
-                    </div>
+                    <img src="imgs/pyduino_pong.png" alt="PyDuino Pong" width="400" height="300">
                 </div>
             </div>
 
-            <div class="card">
-                <div class="info">
+            <div class="project-card" data-modal-id="3">
+                <div class="info" id="one">
                     <h1>Login RESTful API</h1>
-                    <img src="imgs/signup.png" alt="Login">
-                    <div>
-                        <button class="open-button">More Information</button>
-                    </div>
+                    <img src="imgs/signup.png" alt="Login" width="300" height="200">
                 </div>
             </div>
 
@@ -110,115 +102,104 @@
 
 
     <section id="skills">
-        <div class="header" style="justify-content: center;">
+        <div class="header">
             <h1>Skills</h1>
         </div>
 
         <div class="skill-cards">
-            <div class="card">
+            <div class="skill-card" data-modal-id="4">
                 <i class='devicon-github-original' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="5">
                 <i class='devicon-cplusplus-plain' style="font-size: 1.5cm; color: #ffffff; "></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="6">
                 <i class='bx bxl-python' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="7">
                 <i class='bx bxl-java' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="8">
                 <i class='devicon-ubuntu-plain' style="font-size: 1.5cm; color:#ffffff"></i>
             </div>
 
         </div>
 
         <div class="skill-cards">
-            <div class="card">
+            <div class="skill-card" data-modal-id="9">
                 <i class='bx bxl-flutter' style="font-size: 1.5cm; color: #ffffff;"></i>
+
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="10">
                 <i class='bx bxl-visual-studio' style="font-size: 1.5cm; color: #ffffff;"></i>
+                
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="11">
                 <i class='devicon-arduino-plain-wordmark' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="12">
                 <i class='devicon-c-plain' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
 
-            <div class="card">
+            <div class="skill-card" data-modal-id="13">
                 <i class='devicon-csharp-plain' style="font-size: 1.5cm; color: #ffffff;"></i>
             </div>
         </div>
 
     </section>
 
-    <div>
-        <dialog>
-            <h2>About</h2>
-            <p>
 
-                A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with
-                a
-                size adjustable pencil as well as changing the its color,
-                picking a color from the screen and storing it for later use via the rectangle icon in the menu, erase
-                contents as well as drawing a stroke adjustable line and with more features to come in the forseeable
-                future
+    <div id="modal-container" data-modal-id="1">
+        <div class="modal-background">
+          <div class="modal">
+            <h2>About</h2>
+            <p>A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with a variety of tools such as<br> a pencil, color bucket, color picker, and many more 
             </p>
-        </dialog>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <dialog>
+    <div id="modal-container" data-modal-id="2">
+        <div class="modal-background">
+          <div class="modal">
             <h2>About</h2>
             <p>
                 A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow
-                for the use
+                for the use <br>
                 of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in
                 terms of score
             </p>
-        </dialog>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <dialog>
+
+    <div id="modal-container" data-modal-id="3">
+        <div class="modal-background">
+          <div class="modal">
             <h2>About</h2>
             <p>
                 A RESTful API written in Python using the Flask framework with MariaDB functionality that emulates a
                 signup page
             </p>
-        </dialog>
+            </div>
+        </div>
     </div>
 
+    <div class="icon-bar">
+        <a href="https://linkedin.com/in/malik-zurkiyeh-4b00961b3/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/m-zurkiyeh" target="_blank" class="github"><i class="fa fa-github"></i></a>
+    </div>
 
-    <!--
-
-        <div id="pyduino_pong" class="modal">
-            <h2>About</h2>
-            <p>
-                A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow for the use
-                of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in terms of score
-            </p>
-        </div>
-        
-        <div id="login" class="modal">
-            <h2>About</h2>
-            <p>
-                A RESTful API written in Python using the Flask framework with MariaDB functionality that emulates a signup page
-            </p>
-        </div>
-    -->
-
-    <script src="assets/particles.js-master/particles.js"></script>
-    <script src="assets/particles.js-master/demo/js/app.js"></script>
+    <script src="assets/particles.js"></script>
+    <script src="assets/app.js"></script>
     <script src="assets/script.js"></script>
 
 </body>
