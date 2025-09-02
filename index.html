@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+    <body>
+
+        <header class="header">
+
+            <a href="#Home" class="logo">Malik <span>Zurkiyeh</span></a>
+            
+            
+            <i class="bx bx-menu" id="menu-icon"></i>
+            
+
+            
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-switch">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                </button>
+            </nav>
+
+        </header>
+
+        <section class="home" id="home">
+
+            <div class="home-img">
+                <img src="assets/imgs/portrait.jpg" alt="">
+            </div>
+
+            <div class="home-content">
+                <h1>It's <span>Malik</span></h1>
+                <h3 class="text-animation">
+                    I'm an aspiring <span></span>
+                </h3>
+
+                <p>This is a placeholder</p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/malik-zurkiyeh-4b00961b3/" target="_blank"><i class="bx bxl-linkedin"/></i></a>
+                    <a href="https://github.com/m-zurkiyeh" target="_blank"><i class="bx bxl-github"/></i></a>
+                </div>
+                <a href="" class="btn">Hire Me?</a>
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3 class="text-animation">
+                    <span></span>
+                </h3>
+                <p>This is a placeholder number two</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+            <div class="about-img">
+                <img src="assets/imgs/portrait.JPG" alt="">
+            </div>
+        </section>
+
+
+        <section class="services" id="services">
+            <h2 class="heading">Services</h2>
+            <div class="services-container">
+
+                <div class="service-box">
+                    <div class="service-info">
+                        <h4>Web Development</h4>
+                        <p>Placeholder 3</p>
+                    </div>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-info">
+                        <h4>Cloud Development</h4>
+                        <p>Placeholder 3</p>
+                    </div>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-info">
+                        <h4>Database Development</h4>
+                        <p>Placeholder 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="contact" id="contact">
+            <div class="contact-info">
+                <h2 class="heading">Contact <span>Me</span></h2>
+                <p>If you like what you see, please don't hesitate to contact me and I will reply back as soon as possible!</p>
+            </div>
+            <form id = "email-form" action="#">
+                <div class="input-box">
+                    <input type="text" id= "full-name" placeholder="Full Name">
+                    <input type="email" id= "e-mail" placeholder="E-mail">
+                </div>
+                <div class="input-box">
+                    <input type="number"  id= "phone-number" placeholder="Phone Number">
+                    <input type="text" id = "subject" placeholder="Subject">
+                </div>
+
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn" onclick="sendEmail()">
+            </form>
+        </section>
+
+        <footer class="footer">
+
+            <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/malik-zurkiyeh-4b00961b3/" target="_blank"><i class="bx bxl-linkedin"/></i></a>
+                    <a href="https://github.com/m-zurkiyeh" target="_blank"><i class="bx bxl-github"/></i></a>
+                </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+
+                <li>
+                    <a href="#">Services</a>
+                </li>
+
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="assets/script.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </body>
+</html>
