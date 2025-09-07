@@ -118,9 +118,11 @@ $('.project-box').click(function(){
 
 })
 
-  
-$(`#modal-container[data-modal-id]`).click(function(){
-    $(this).addClass('out');
-    $('body').removeClass('modal-active');
-    $('body').css('overflow','auto');
+$(`#modal-container[data-modal-id]`).click(function(event){
+    
+    if ($(event.target).closest(".modal-btn").length === 0) {
+        $(this).addClass('out');
+        $('body').removeClass('modal-active');
+        $('body').css('overflow','auto');
+    }
 });

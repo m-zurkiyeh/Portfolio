@@ -46,7 +46,10 @@
             <div class="home-content">
                 <h1>It's <span>Malik</span></h1>
                 <h3 class="text-animation">
-                    I'm an aspiring <span></span>
+                    I'm an aspiring 
+                    <div>
+                        <span></span>
+                    </div>
                 </h3>
 
                 <p>Welcome to my Portfolio</p>
@@ -55,7 +58,7 @@
                     <a href="https://www.linkedin.com/in/malik-zurkiyeh-4b00961b3/" target="_blank"><i class="bx bxl-linkedin"/></i></a>
                     <a href="https://github.com/m-zurkiyeh" target="_blank"><i class="bx bxl-github"/></i></a>
                 </div>
-                <a href="" class="btn">Hire Me?</a>
+                <a href="Resume.pdf" target=_blank class="btn">Check out my Resume!</a>
             </div>
 
         </section>
@@ -76,7 +79,7 @@
                 <a href="" class="btn">Read More</a>
             </div>
             <div class="about-img">
-                <img src="assets/imgs/portrait.JPG" alt="">
+                <img src="assets/imgs/programmer.png" alt="">
             </div>
         </section>
 
@@ -89,25 +92,17 @@
                         <h4>Login Page</h4>
                         <p>
                             A RESTful API written in Python using the Flask framework <br>
-                            which simulates a login page and stores user information
                         </p>
                     </div>
                 </div>
                 
-                <div class="project-box">
+                <div class="project-box" data-modal-id="2">
                     <div class="project-info">
                         <h4>Pong Clone</h4>
-                        <p>A clone of Pong written in Python using PyGame with Arduino functionality.<br> Utilizes 2 potenttiometers for paddle movement and </p>
+                        <p>A clone of Pong written in Python using PyGame with Arduino functionality.</p>
                     </div>
                 </div>
-                
-                <div class="project-box">
-                    <div class="project-info">
-                        <h4>Database Development</h4>
-                        <p>Placeholder 3</p>
-                    </div>
-                </div>
-                
+                                
             </div>
         </section>
 
@@ -118,22 +113,37 @@
 
                 <div class="skill-box">
                     <div class="skill-info">
-                        <h4>Web Development</h4>
-                        <p>Placeholder 3</p>
+                        <h4>Python</h4>
                     </div>
                 </div>
                 
                 <div class="skill-box">
                     <div class="skill-info">
-                        <h4>Cloud Development</h4>
-                        <p>Placeholder 3</p>
+                        <h4>Java</h4>
                     </div>
                 </div>
                 
                 <div class="skill-box">
                     <div class="skill-info">
-                        <h4>Database Development</h4>
-                        <p>Placeholder 3</p>
+                        <h4>HTML/CSS</h4>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <h4>Java</h4>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <h4>Docker</h4>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-info">
+                        <h4>MySQL</h4>
                     </div>
                 </div>
             </div>
@@ -162,6 +172,68 @@
             </form>
         </section>
 
+        <div id="modal-container" data-modal-id="1">
+            <div class="modal-background">
+                <div class="modal">
+                    <div>
+                        <h2>About</h2>
+                        <p>
+                            a Python-based RESTful API that utilizes the Flask framework to simulate a login page <br>
+                            Includes features such as Regex Authentication for duplicate accounts as well as passwords <br>
+                            Stores user information (including encrpyted passwords) in the user's local MariaDB database
+
+                        </p>
+                        <br>
+                        <p>
+                            Languages and Frameworks used: Python, Flask, MariaDB, HTML, CSS
+                        </p>
+                        <br>
+                        <div id="modal-btn">
+                            <a href="https://github.com/m-zurkiyeh/Login"  class="modal-btn" target="_blank" >Repo</a>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <img class="modal-img" src="assets/imgs/signup.png" alt="">   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container" data-modal-id="2">
+            <div class="modal-background">
+                <div class="modal">
+                    <div>
+                        <h2>About</h2>
+                        <p>
+                            A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow
+                            for the use <br>
+                            of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in
+                            terms of score
+                        </p>
+                        
+                        <br>
+                        <div id="modal-btn">
+                            <a href="https://github.com/m-zurkiyeh/PyDuinoPong" class="modal-btn" target="_blank" >Repo</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="modal-img" src="assets/imgs/pyduino_pong.png" alt="">   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-container" data-modal-id="3">
+            <div class="modal-background">
+            <div class="modal">
+                <h2>About</h2>
+                <p>A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with a variety of tools such as<br> a pencil, color bucket, color picker, and many more 
+                </p>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
 
             <div class="social-icons">
@@ -171,7 +243,11 @@
 
             <ul class="list">
                 <li>
-                    <a href="#">FAQ</a>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About Me</a>
                 </li>
 
                 <li>
@@ -182,55 +258,16 @@
                     <a href="#skills">Skills</a>
                 </li>
 
-                <li>
-                    <a href="#about">About Me</a>
-                </li>
 
                 <li>
                     <a href="#">Contact</a>
                 </li>
 
-                <li>
-                    <a href="#">Privacy Policy</a>
-                </li>
             </ul>
         </footer>
 
-        <div id="modal-container" data-modal-id="1">
-            <div class="modal-background">
-            <div class="modal">
-                <h2>About</h2>
-                <p>
-                    A RESTful API written in Python using the Flask framework with MariaDB functionality that emulates a
-                    signup page
-                </p>
-                </div>
-            </div>
-        </div>
+       
 
-        <div id="modal-container" data-modal-id="2">
-            <div class="modal-background">
-            <div class="modal">
-                <h2>About</h2>
-                <p>A painting app programmed in Java using the Swing Library and Eclipse IDE. Allows the user to draw with a variety of tools such as<br> a pencil, color bucket, color picker, and many more 
-                </p>
-                </div>
-            </div>
-        </div>
-
-        <div id="modal-container" data-modal-id="3">
-            <div class="modal-background">
-            <div class="modal">
-                <h2>About</h2>
-                <p>
-                    A clone of the classic Atari classic Pong written in Python using Pygame and Serial libraries to allow
-                    for the use <br>
-                    of an arduino with 2 potentiometers for paddle movement and LEDs to signal who has the advantage in
-                    terms of score
-                </p>
-                </div>
-            </div>
-        </div>
 
 
         
