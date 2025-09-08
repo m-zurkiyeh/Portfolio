@@ -66,6 +66,11 @@ function typingAnimation(id, text, speed = 50) {
 }
 
 
+/*Modal code, courtesy of Jesse Couch
+CodePen Profile: https://codepen.io/designcouch
+Animations: https://codepen.io/designcouch/pen/obvKxm
+*/
+
 $('.project-card').click(function(){
     var modalId = $(this).data('modal-id');
     console.log(modalId);

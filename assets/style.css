@@ -24,6 +24,38 @@ html {
 
 }
 
+@media (max-width: 600px) {
+  .navi {
+    margin:0px;
+    padding:10px;
+    font-size: 10px;
+  }
+  
+  header {
+    font-size: 10px;
+  }
+
+  div.info-text h1{
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  header p#Name {
+    margin: 0px;
+    padding: 5px;
+    font-size: 10px
+  }
+
+  section#about
+  div.container
+  div.card
+  div.info
+  p.bio {
+    line-height:2.0;
+    font-size: 1vw;
+  }
+
+}
 
 
 
