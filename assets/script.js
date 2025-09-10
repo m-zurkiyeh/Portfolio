@@ -1,3 +1,4 @@
+let i = 0;
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
@@ -86,12 +87,6 @@ function typingAnimation(id, text, speed = 50) {
 document.getElementById('email-form')
  .addEventListener('submit', function(event) {
     event.preventDefault();
-    let fullName = document.getElementById("full-name").value;
-    let emailSubject = document.getElementById("subject").value;
-    let emailAddress = document.getElementById("contact-email").value;
-    let emailMessage = document.getElementById("message").value;
-    
-
 
    submitBtn.value = 'Sending...';
 
@@ -113,9 +108,10 @@ $('.project-box').click(function(){
     var modalId = $(this).data('modal-id');
     console.log(modalId);
     $(`#modal-container[data-modal-id='${modalId}']`).removeAttr('class').addClass('unfold');
-    $('body').addClass('modal-active');
-    $('body').css('overflow','hidden');
-
+    $("body").addClass('modal-active');
+    $("body").addClass("modal-open");
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll="no";
 })
 
 $(`#modal-container[data-modal-id]`).click(function(event){
@@ -123,6 +119,7 @@ $(`#modal-container[data-modal-id]`).click(function(event){
     if ($(event.target).closest(".modal-btn").length === 0) {
         $(this).addClass('out');
         $('body').removeClass('modal-active');
-        $('body').css('overflow','auto');
+        document.documentElement.style.overflow = 'scroll';
+        document.body.scroll = "yes";
     }
 });
