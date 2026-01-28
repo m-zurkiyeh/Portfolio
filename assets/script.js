@@ -104,7 +104,7 @@ document.getElementById('email-form')
     });
 });
 
-$('.project-box').click(function(){
+$('.project-box, .certification-box').click(function(){
     var modalId = $(this).data('modal-id');
     console.log(modalId);
     $(`#modal-container[data-modal-id='${modalId}']`).removeAttr('class').addClass('unfold');
@@ -119,7 +119,10 @@ $(`#modal-container[data-modal-id]`).click(function(event){
     if ($(event.target).closest(".modal-btn").length === 0) {
         $(this).addClass('out');
         $('body').removeClass('modal-active');
-        document.documentElement.style.overflow = 'scroll';
-        document.body.scroll = "yes";
+        setTimeout(() => {
+            document.documentElement.style.overflow = 'scroll';
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.scroll = "yes";
+        },1560);
     }
 });

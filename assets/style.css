@@ -33,7 +33,6 @@ h4 {color:var(--text-color);}
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
 }
 body {
     background: var(--bg-color);
@@ -199,7 +198,7 @@ div#modal-btn {
 a.modal-btn {
     display: flex;
     padding: 0.5rem 2.9rem;
-    width: 20%;
+    width: fit-content;
     background: var(--box-color);
     border-radius: 4rem;
     font-size: 1.6rem;
@@ -411,6 +410,7 @@ border-radius: 50%;
     background-color: var(--box-color);
     color:black;
     height:180px;
+    width:350px;
     border-radius:3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -420,21 +420,97 @@ border-radius: 50%;
     color: var(--main-color);
     transform: scale(1.03);
 }
-.project-box .project-info{
+.project-box {
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    max-height:150px;
+    max-width:300px;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.project-info{
     display:flex;
     flex-direction:column;
     text-align:left;
     max-height:200px;
     justify-content:center;
-    align-items:baseline;
+    align-items: center;
     padding:5em;
 }
-.project-info h4{
+
+.project-box h4{
+    display:flex;
     font-size:2.5rem;
     font-weight:500;
     margin-bottom: 1rem;
 }
 .project-info p{
+    font-size: 1.6rem;
+    font-weight:400;
+    max-height: 100px;
+}
+
+
+.certifications{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:var(--bg-color) ;
+}
+.certifications h2{
+    color: var(--text-color);
+    text-align: center;
+}
+.certifications-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2.5rem;
+}
+
+.certification-box{
+    background-color: var(--box-color);
+    color:black;
+    height:180px;
+    width:480px;
+    border-radius:3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.certification-box:hover{
+    background:var(--hover-color);
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+.certification-box {
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    max-height:200px;
+    justify-content:center;
+    align-items: center;
+    padding:5em;
+}
+
+.certification-info{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    max-height:200px;
+    justify-content:center;
+    align-items: center;
+    padding:5em;
+}
+
+.certification-box h4{
+    display:flex;
+    font-size:2.5rem;
+    font-weight:500;
+    margin-bottom: 1rem;
+}
+.certification-info p{
     font-size: 1.6rem;
     font-weight:400;
     max-height: 100px;
@@ -466,7 +542,6 @@ border-radius: 50%;
     align-items: center;
     width: 150px;
     border-radius:3rem;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .skill-box:hover{
@@ -508,7 +583,6 @@ border-radius: 50%;
     display:flex;
     justify-content: center;
     gap: 10rem;
-    background: var(--bg-color);
     color:var(--text-color);
 }
 #contact h2 span{
@@ -583,7 +657,7 @@ border-radius: 50%;
     bottom:0;
     width:100%;
     padding: 30px 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 .footer .social-icons{
     text-align: center;
@@ -689,6 +763,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         color: var(--text-color);
         padding:50px;
         height: auto;
+        width: max-content;
         border-radius:3px;
         font-weight:300;
         h2 {
@@ -720,7 +795,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
     }
 
 }
-
+/*---------------------------------------------------------*/
 @media(max-width:1285px) {
     html{
         font-size: 55%;
@@ -963,7 +1038,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         margin-bottom: 3rem;
         text-align: center;
     }
-    .projects-container{
+    .projects-container, .certifications-container{
         grid-template-columns: repeat(1,1fr);
     }
     .skills h2{
@@ -1082,7 +1157,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         margin-bottom: 3rem;
         text-align: center;
     }
-    .projects-container{
+    .projects-container, .certifications-container{
         grid-template-columns: repeat(1,1fr);
     }
     .skills h2{
@@ -1204,7 +1279,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         margin-bottom: 3rem;
         text-align: center;
     }
-    .projects-container{
+    .projects-container,.certifications-container{
         grid-template-columns: repeat(1,1fr);
     }
     .skills h2{
@@ -1325,7 +1400,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         margin-bottom: 3rem;
         text-align: center;
     }
-    .projects-container{
+    .projects-container,.certifications-container{
         grid-template-columns: repeat(1,1fr);
     }
     .skills h2{
