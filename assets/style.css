@@ -1403,7 +1403,7 @@ Animations: https://codepen.io/designcouch/pen/obvKxm
         grid-template-columns: repeat(1,1fr);
     }
     .certification-box {
-        max-width: fit-content;
+        max-width: 380px;
         padding: 0.5rem;
         margin:0.5rem;
         display: flex;
